@@ -2,120 +2,87 @@ import Link from "next/link";
 import { CiTwitter } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa6";
 import { FaCcAmazonPay } from "react-icons/fa";
-import '../../styles/globals.css'
-
+import "../../styles/globals.css";
 
 export function Footer() {
   return (
-    <div className="w-full">
-      <div className="container mx-auto px-5">
-
-      
-    <footer className="border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto py-10">
+    <footer className="border-t bg-gray-900 text-white">
+      <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+          {/* About Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About</h3>
+            <h3 className="text-lg font-semibold mb-4 text-lime-400">About</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Team
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Careers
-                </Link>
-              </li>
+              {["About Us", "Team", "Careers"].map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-white transition duration-300"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+
+          {/* Resources Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 text-lime-400">Resources</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Support
-                </Link>
-              </li>
+              {["Documentation", "Blog", "Support"].map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-white transition duration-300"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+
+          {/* Legal Section */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4 text-lime-400">Legal</h3>
             <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Terms of Service
-                </Link>
-              </li>
+              {["Privacy Policy", "Terms of Service"].map((item, i) => (
+                <li key={i}>
+                  <Link
+                    href="#"
+                    className="text-sm text-gray-400 hover:text-white transition duration-300"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
+
+          {/* Social Media */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Connect</h3>
+            <h3 className="text-lg font-semibold mb-4 text-lime-400">Connect</h3>
             <div className="flex space-x-4">
-              <button >
-                <CiTwitter className="h-4 w-4" />
-              </button>
-              <button>
-                <FaGithub className="h-4 w-4" />
-              </button>
-              <button>
-                <FaCcAmazonPay className="h-4 w-4" />
-              </button>
+              {[CiTwitter, FaGithub, FaCcAmazonPay].map((Icon, i) => (
+                <button
+                  key={i}
+                  className="p-2 rounded-full bg-gray-800 hover:bg-lime-600 transition duration-300 transform hover:scale-110"
+                >
+                  <Icon className="h-5 w-5 text-white" />
+                </button>
+              ))}
             </div>
           </div>
         </div>
-        <div className="mt-10 border-t pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
+
+        {/* Footer Bottom */}
+        <div className="mt-10 border-t border-gray-700 pt-8 text-center">
+          <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} PromptMarket. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
-    </div>
-    </div>
   );
 }

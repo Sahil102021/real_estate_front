@@ -4,6 +4,7 @@ import axios from "axios";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import ProductCard from "./productCard/page.jsx";
+import { Footer } from "../components/footer/page.jsx";
 
 const ProductListpage = () => {
   let [productList, setProductlist] = useState([]);
@@ -49,6 +50,7 @@ const ProductListpage = () => {
               );
             })}
           </div>
+                <Footer />
         </div>
       </div>
     </div>

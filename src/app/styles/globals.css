@@ -2,3 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* Navigation Links */
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    position: relative;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect: Change Color */
+  .nav-item:hover {
+    color: white;
+  }
+  
+  /* Underline Effect on Hover */
+  .nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-item:hover::after {
+    transform: scaleX(1);
+  }
+  

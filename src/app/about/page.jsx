@@ -11,7 +11,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <section className="relative h-[50vh] min-h-[400px]">
           <Image
-            src="/placeholder.svg?height=800&width=1200"
+            src="https://res.cloudinary.com/dttftmu4m/image/upload/v1740141110/city_by_the_bay_1232_iwxx10.webp"
             alt="Real Estate Office"
             fill
             className="object-cover "
@@ -22,6 +22,8 @@ export default function AboutPage() {
             </h1>
           </div>
         </section>
+        <div className="h-3 bg-slate-800"></div>
+
 
         <div className="container mx-auto">
           {/* Company Description */}
@@ -91,17 +93,17 @@ export default function AboutPage() {
                 {
                   name: "John Doe",
                   role: "Founder & CEO",
-                  image: "/placeholder.svg?height=300&width=300",
+                  image: "https://res.cloudinary.com/dttftmu4m/image/upload/v1740238056/istockphoto-1230749818-612x612_ms0mmk.jpg",
                 },
                 {
                   name: "Jane Smith",
                   role: "Senior Real Estate Agent",
-                  image: "/placeholder.svg?height=300&width=300",
+                  image: "https://res.cloudinary.com/dttftmu4m/image/upload/v1740238056/istockphoto-1230749818-612x612_ms0mmk.jpg",
                 },
                 {
                   name: "Mike Johnson",
                   role: "Property Manager",
-                  image: "/placeholder.svg?height=300&width=300",
+                  image: "https://res.cloudinary.com/dttftmu4m/image/upload/v1740238056/istockphoto-1230749818-612x612_ms0mmk.jpg",
                 },
               ].map((member, index) => (
                 <div

@@ -45,12 +45,12 @@ const HeaderPage = () => {
     { name: "Home", link: "/" },
     { name: "Menu", link: "/" },
     { name: "About", link: "/about" },
-    { name: "Contact", link: "/" },
     { name: "Product", link: "/products" },
+    { name: "Banner", link: "/banner" },
   ];
 
   return (
-    <header className="w-full bg-slate-600 md:bg-transparent">
+    <header className="w-full bg-slate-600  md:bg-transparent fixed z-50 ">
       <div className="container mx-auto px-3">
         <div className="w-full max-w-[calc(100%-24px)] h-16 md:bg-gray-900 rounded-b-lg flex justify-between items-center md:px-3 relative">
           {/* Logo */}

@@ -6,7 +6,7 @@ import "../../styles/globals.css";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-gray-900 text-white">
+    <footer className="border-t bg-gray-900 text-white rounded-t-2xl">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
           {/* About Section */}
